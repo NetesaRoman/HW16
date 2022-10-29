@@ -105,7 +105,7 @@ public class Main {
         System.out.println(sum[0]);
     }
 
-    public static void groupAndPrintByCategories(List<Product> productList) {
+    public static Map<String, ProductList> groupAndPrintByCategories(List<Product> productList) {
         Map<String, ProductList> productMap = new HashMap<>();
 
         productList.stream().forEach(p -> {
@@ -118,5 +118,6 @@ public class Main {
         });
 
         productMap.forEach((key, value) -> value.printInfo());
+        return productMap;
     }
 }
